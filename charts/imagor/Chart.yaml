@@ -1,0 +1,49 @@
+apiVersion: v2
+name: imagor
+description: A Helm chart for imagor
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: "1.0.0"
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+# It is recommended to use it with quotes.
+appVersion: "1.4.13"
+
+keywords:
+  - imagor
+  - image
+  - processing
+
+sources:
+  - https://github.com/cshum/imagor
+
+maintainers:
+  - name: ESYON GmbH
+    email: support@esyon.de
+    url: esyon.de
+
+annotations:
+  # This annotation allows including named links, which will be rendered nicely in Artifact Hub.
+  # You can use this annotation to include links not included previously in the Chart.yaml file,
+  # or you can use it to name links already present (in the sources section, for example).
+  artifacthub.io/links: |
+    - name: Projects GitHub
+      url: https://github.com/cshum/imagor
+    - name: Chart's GitHub
+      url: https://github.com/esyon/helm-charts/tree/master/charts/imagor
+    - name: Chart's Changelog
+      url: https://github.com/esyon/helm-charts/tree/master/charts/imagor/CHANGELOG.md
