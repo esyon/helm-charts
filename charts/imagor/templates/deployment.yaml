@@ -55,11 +55,15 @@ spec:
             - name: FILE_RESULT_STORAGE_BASE_DIR
               value: {{ .Values.api.fileResultStorage.baseDir }}
             - name: DEBUG
-              value: "1"
+              value: {{ .Values.api.debug | quote }}
             - name: SERVER_CORS
-              value: "0"
+              value: {{ .Values.api.server.cors | quote }}
             - name: SERVER_ACCESS_LOG
-              value: "1"
+              value: {{ .Values.api.server.accessLog | quote }}
+            {{ if .Values.api.httpLoader.baseUrl }}
+            - name: HTTP_LOADER_BASE_URL
+              value: {{ .Values.api.httpLoader.baseUrl }}
+            {{ end}}
           ports:
             - name: http
               containerPort: {{ .Values.api.port }}

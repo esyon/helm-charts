@@ -119,10 +119,14 @@ ingress:
 # The API module is an HTTP/1 and HTTP/2 (H2C) server. Other modules may add routes, middlewares, and health checks.
 api:
   port: 8089
-  unsave: 1
+  debug: 0
+  server:
+    cors: 0
+    accessLog: 0
   fileLoader: 
     baseDir: /tmp/data
   fileStorage:
     baseDir: /tmp/data
   fileResultStorage:
     baseDir: /tmp/data/result
+
